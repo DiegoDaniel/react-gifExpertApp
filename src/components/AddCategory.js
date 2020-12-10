@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-export const AddCategory = ( { categories, setCategories } ) => {
+export const AddCategory = ( { setCategories } ) => {
 
     const [inputValue, setInputValue] = useState('');
 
@@ -21,11 +21,12 @@ export const AddCategory = ( { categories, setCategories } ) => {
 
     return (
         <form onSubmit={ handleSubmit }>
-          <input 
-            type="text"
-            value={ inputValue }
-            onChange={ handleInputValue }
-            />
+            <p> {inputValue} </p>
+            <input 
+                type="text"
+                value={ inputValue }
+                onChange={ handleInputValue }
+                />
         </form>
     )
 
